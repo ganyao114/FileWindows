@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <ImageView
+        android:id="@+id/circleImageView1"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_launcher" 
+        android:visibility="gone"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/widget_margin_top"
+    android:layout_marginLeft="@dimen/widget_margin_left"
+    android:layout_marginRight="@dimen/widget_margin_right"
+    android:layout_marginBottom="@dimen/widget_margin_bottom"
+    android:orientation="vertical"
+    android:id="@+id/floatlinerlayout"
+    >
+    <LinearLayout
+        android:id="@+id/widget_header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:background="@drawable/header_bg_mms_widget_holo"
+        android:gravity="center_vertical">
+        <ImageButton
+            android:id="@+id/widget_icon1"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_marginRight="8dip"
+            android:background="@drawable/app_icon" />
+
+        <Spinner
+            android:id="@+id/widget_spinner"
+            style="@style/menu_labels_style"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dip"
+            android:layout_weight="1"
+            android:freezesText="true"
+            android:text="文件视窗"
+            android:textColor="@color/black" />
+
+        <!-- Note: We can't set "freezesText" on the widget_unread_count view, as the launcher can
+             restore stale data over updated data. -->
+        <TextView
+            android:id="@+id/widget_unread_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dip"
+            android:textSize="18sp"
+            android:textColor="#777777" />
+
+        <ImageButton
+            android:id="@+id/widget_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="文件列表"
+            android:paddingBottom="4dip"
+            android:paddingLeft="4dip"
+            android:src="@drawable/cancel" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:numColumns="3"
+        android:scrollingCache="true" 
+        android:background="@drawable/gradient_bg_widget_holo"
+        android:cacheColorHint="#00000000">
+
+    </GridView>
+
+</LinearLayout>
+
+</LinearLayout>
